@@ -63,7 +63,7 @@ function App() {
           w-10 
           bg-gradient-to-b from-[#000080] to-[#1084d0]
           flex flex-col justify-end items-center
-          pb-4
+          pb-16
         ">
           <span className="
             text-white font-bold text-xl tracking-widest 

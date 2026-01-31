@@ -30,7 +30,8 @@ unsafe extern "system" fn low_level_keyboard_proc(code: i32, w_param: WPARAM, l_
                             if let Ok(Some(monitor)) = window.current_monitor() {
                                 let screen_size = monitor.size();
                                 if let Ok(window_size) = window.outer_size() {
-                                    let y = screen_size.height as i32 - window_size.height as i32;
+                                    // Raise up by 55px to avoid covering taskbar
+                                    let y = screen_size.height as i32 - window_size.height as i32 - 55;
                                     let _ = window.set_position(Position::Physical(PhysicalPosition { x: 0, y }));
                                 }
                             }
